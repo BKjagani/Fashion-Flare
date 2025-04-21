@@ -1,0 +1,24 @@
+import express from "express";
+import cors from 'cors'
+import 'dotenv/config'
+import connectDB from "./config/db.js";
+import categoryRouter from './modules/category/category.route.js'
+import productRouter from './modules/product/product.route.js'
+const app = express();
+const port = process.env.PORT || 3000
+app.use(express.json())
+app.use(cors())
+connectDB()
+
+app.get('/', (req, res) => {
+    res.status(200).json({"message" : "server is runnning"})
+})
+
+app.use('/api', categoryRouter);
+
+app.use('/api', productRouter)
+
+app.listen(port, () => {
+    console.log(`server is runninng on ${port}`)
+    console.log(`http://localhost:${port}`)
+})
