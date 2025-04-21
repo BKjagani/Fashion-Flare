@@ -4,14 +4,19 @@ Fashion Flare is a modern e-commerce platform built with the MERN stack (MongoDB
 
 ## Features
 
-- 🛍️ Product Catalog with Categories
-- 🔍 Advanced Search and Filtering
-- 🛒 Shopping Cart Management
-- 💳 Secure Payment Integration (Stripe)
-- 👤 User Authentication & Authorization
-- 📱 Responsive Design
-- ⚡ Fast and Modern UI with Vite
-- 🔒 Secure API Endpoints
+🛍️ Product Catalog – Browse products with category-wise organization
+
+🔎 Category Filtering – View products based on selected category
+
+🛒 Shopping Cart – Add products to the cart and manage items
+
+💳 Stripe Test Payment – Secure checkout using Stripe (test mode)
+
+👤 Authentication with Clerk – User sign-in and sign-up handled via Clerk
+
+🔐 Admin Dashboard – Admin can manage products and categories
+
+⚡ Vite-Powered Frontend – Fast and optimized React experience
 
 ## Tech Stack
 
