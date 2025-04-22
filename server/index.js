@@ -4,6 +4,7 @@ import 'dotenv/config'
 import connectDB from "./config/db.js";
 import categoryRouter from './modules/category/category.route.js'
 import productRouter from './modules/product/product.route.js'
+import cartRouter from './modules/cart/cart.route.js'
 const app = express();
 const port = process.env.PORT || 3000
 app.use(express.json())
@@ -17,6 +18,8 @@ app.get('/', (req, res) => {
 app.use('/api', categoryRouter);
 
 app.use('/api', productRouter)
+
+app.use('/api', cartRouter);
 
 app.listen(port, () => {
     console.log(`server is runninng on ${port}`)

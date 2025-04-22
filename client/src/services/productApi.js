@@ -38,4 +38,24 @@ const updateProduct  = async (id, obj) => {
     }
 }
 
-export {postProduct, getProduct, deleteProduct, updateProduct}
+const getProductByCategory = async (categoryName) => {
+    try {
+        const response  = await API.get(`/products/category/${categoryName}`)
+        return await response.data.response
+    } catch (error) {
+        console.log(error)
+        return [];
+    }
+}
+
+const getOneProduct = async (id) => {
+    try {
+        const response = await API.get(`/products/${id}`)
+        return await response.data.response;
+    } catch (error) {
+        console.log(error)
+        return {}
+    }
+}
+
+export {postProduct, getProduct, deleteProduct, updateProduct, getProductByCategory, getOneProduct}

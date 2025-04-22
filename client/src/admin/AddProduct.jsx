@@ -152,10 +152,3 @@ const AddProduct = () => {
 };
 
 export default AddProduct;
-
-
-// https://manyavar.scene7.com/is/content/manyavar/SB17482_425-RANI_301.21366_19-09-2024-03-39-0x900-1500k
-
-//https://manyavar.scene7.com/is/image/manyavar/SB17482_425-RANI_101.21344_04-09-2024-20-46:650x900?&dpr=on,2
-
-// https://manyavar.scene7.com/is/image/manyavar/SB17482_425-RANI_101.21344_04-09-2024-20-46:650x900?&dpr=on,2

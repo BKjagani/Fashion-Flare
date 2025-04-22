@@ -36,7 +36,7 @@ const getProduct = async (req, res) => {
 const getOneProduct = async (req, res) => {
   try {
     const _id = req.params.id;
-    const response = await Product.findById(_id);
+    const response = await Product.findById(_id).populate('category', 'categoryName');
     if (!response) {
       return res.status(400).json({ message: "can not get one product" });
     }

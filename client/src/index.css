@@ -1,4 +1,43 @@
 .appNavbar{
     border-radius: 20px;
     background-color: #fcf5f3 !important;
+    width: 80%;
+    margin: 10px auto;
 }
+
+.home-category-sections{
+    background-color: #e0ba9a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.home-category-title{
+    color: #8b0f39;
+    text-decoration: none !important;
+}
+
+
+.product-view-row {
+    background-color: #fcf5f3;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .product-details {
+    padding: 1rem 2rem;
+  }
+  .price-old {
+    text-decoration: line-through;
+    color: #d9534f;
+  }
+  .price-new {
+    font-size: 1.8rem;
+    color: #28a745;
+    font-weight: bold;
+  }
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
