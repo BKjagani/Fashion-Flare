@@ -38,7 +38,7 @@ function ProductByCategory() {
                         <div className="carousel-item active">
                           <img
                             src={product.imageUrl1 || defaultImage}
-                            className="d-block w-100"
+                            className="d-block w-100 home-images"
                             alt="Product Image 1"
                             onClick={() => navigate(`/productview/${product._id}`)}
                           />
@@ -48,7 +48,7 @@ function ProductByCategory() {
                           {product.videoUrl ? (
                             <video
                               width="600"
-                              className="d-block w-100"
+                              className="d-block w-100 home-images"
                               autoPlay
                               muted
                               loop
@@ -61,7 +61,7 @@ function ProductByCategory() {
                           ) : (
                             <img
                               src={product.imageUrl1 || defaultImage}
-                              className="d-block w-100"
+                              className="d-block w-100 home-images"
                               alt="Fallback Image"
                               onClick={() => navigate(`/productview/${product._id}`)}
                             />
@@ -71,7 +71,7 @@ function ProductByCategory() {
                         <div className="carousel-item">
                           <img
                             src={product.imageUrl2 || defaultImage}
-                            className="d-block w-100"
+                            className="d-block w-100 home-images"
                             alt="Product Image 2"
                             onClick={() => navigate(`/productview/${product._id}`)}
                           />

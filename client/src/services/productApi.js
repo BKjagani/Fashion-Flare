@@ -1,6 +1,6 @@
 import axios from "axios";
 const API = axios.create({
-    baseURL: "http://localhost:3005/api",
+    baseURL: import.meta.env.VITE_BACKEND_URL,
   });
 const postProduct = async (obj) => {
     try {

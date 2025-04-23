@@ -8,7 +8,8 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
-import { FaShoppingCart } from "react-icons/fa"; // Using react-icons for cart icon
+import { FaShoppingCart, FaClipboardList } from "react-icons/fa"; // Using react-icons for cart icon
+import { BsCardChecklist } from "react-icons/bs";
 
 function Navbar() {
   const [categoryList, setCategoryList] = useState([]);
@@ -44,6 +45,12 @@ function Navbar() {
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <i>FashionFlare</i>
+          </Link>
+          <Link className="navbar-brand" to="/about">
+            <i>About</i>
+          </Link>
+          <Link className="navbar-brand" to="/categories">
+            <i>Categories</i>
           </Link>
 
           <button
@@ -105,8 +112,11 @@ function Navbar() {
             {/* Right Side: Cart + Auth */}
             <div className="d-flex align-items-center gap-3">
               {/* Cart Icon */}
+              <Link to="/orders" className="text-decoration-none" style={{color : "#fff"}}>
+                <FaClipboardList size={22} color="#ee4467" />
+              </Link>
               <Link to="/cart" className="text-decoration-none">
-                <FaShoppingCart size={22} color="#470c19" />
+                <FaShoppingCart size={22} color="#921936" />
               </Link>
 
               {/* Auth Buttons */}

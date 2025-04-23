@@ -6,9 +6,14 @@
 }
 
 .home-category-sections{
-    background-color: #e0ba9a;
+    background-color: #e7bd9e;
     border-radius: 10px;
     padding: 10px;
+}
+
+.home-images{
+  height: 400px !important;
+  width: 100% !important;
 }
 
 .home-category-title{
@@ -41,3 +46,113 @@
     font-weight: bold;
   }
   
+
+  .success-page {
+    height: 80vh;
+    background: linear-gradient(135deg, #e0f7fa, #fff);
+    border-radius: 20px;
+  }
+  
+  .success-card {
+    border-radius: 20px;
+    max-width: 500px;
+  }
+  
+
+
+  /* General Styling for About Page */
+.about-container {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.about-header {
+  margin-bottom: 30px;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #2b2d42;
+  font-weight: bold;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.about-content {
+  margin-bottom: 50px;
+}
+
+.about-image {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2b2d42;
+  margin-bottom: 30px;
+}
+
+.feature-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.feature-box h6 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2b2d42;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+@media (max-width: 768px) {
+  .feature-box {
+    margin-bottom: 20px;
+  }
+
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
+.about-section {
+  background: url('https://t3.ftcdn.net/jpg/05/08/80/18/360_F_508801825_cD8lcmLyaS4be3A5qqo7ACmh0GX5qpli.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  min-height: 300px;
+}
+
+.services-section {
+  background: url('https://img.freepik.com/premium-photo/text-effect-technology-concept_626203-849.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.cta-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+              url('../static/images/seller-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  min-height: 250px;
+}

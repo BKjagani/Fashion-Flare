@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useUser } from '@clerk/clerk-react';
 import { getCart, updateQuantity } from '../services/cartApi';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import { stripePayment } from '../services/paymentApi';
+import {loadStripe} from "@stripe/stripe-js"
 
 function Cart() {
   const { isLoaded, isSignedIn, user } = useUser();
   const [cartItems, setCartItems] = useState([]);
-
+  const [loading, setLoading] = useState(false)
+  const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK)
   useEffect(() => {
     if (isSignedIn) {
       getCart(user.primaryEmailAddress.emailAddress).then((res) => {
@@ -14,6 +16,28 @@ function Cart() {
       });
     }
   }, [isSignedIn, user]);
+
+
+  async function handleCheckout(e, price){
+    e.preventDefault()
+    setLoading(true)
+    try {
+      const stripe = await stripePromise
+      const response = await stripePayment({price, email : user.primaryEmailAddress.emailAddress, products : cartItems })
+      console.log(response)
+      const result = await stripe.redirectToCheckout({
+        sessionId : response.id
+      })
+      if(result.error){
+        console.error(result.error)
+      }
+    } catch (error) {
+      console.error(error)
+    }finally{
+      setLoading(false)
+    }
+  }
+
   const handleIncrement = async (itemId) => {
     const updated = cartItems.map((item) =>
       item._id === itemId ? { ...item, quantity: item.quantity + 1 } : item
@@ -118,6 +142,7 @@ function Cart() {
                   <strong>₹{total.toFixed(2)}</strong>
                 </li>
               </ul>
+              <button className='btn btn-info my-3' onClick={(e) => handleCheckout(e, total.toFixed(2))} disabled={loading}>{loading ? "Processing..." : "Pay Now"}</button>
             </div>
           </>
         )}
