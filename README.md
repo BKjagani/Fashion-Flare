@@ -116,6 +116,27 @@ fashion-flare/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+
+## 📷 Screenshots
+
+### 🏠 Home Page
+![Home Page](assets/home.jpeg)
+
+### 🧥 About Section
+![Category](assets/about.jpeg)
+
+### 🧥 Categories Section
+![Category](assets/categories.jpeg)
+
+### 👕 Cart Details
+![Product Detail](assets/cart.jpeg)
+
+### 👕 Orders Details
+![Product Detail](assets/orders.jpeg)
+
+### 🧑‍💻 Admin Dashboard
+![Admin](assets/admin.jpeg)
+
 ## License
 
 This project is licensed under the ISC License.
